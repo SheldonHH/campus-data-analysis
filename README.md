@@ -76,8 +76,8 @@ Valid Request:
 ####Using Libraries and External Code
 1. You are welcome to use open source code libraries where it makes sense. But you must make it clear what you have used and why. When in doubt, check with your project supervisor.
 2. Some libraries that you might find useful are
-[OpenCSV](http://opencsv.sourceforge.net/): For easy importing of CSV files
-[UploadBean](http://www.javazoom.net/jzservlets/servlets.html): For easy uploading of zip files to the deployment server
-[D3](http://dciarletta.github.io/d3-floorplan/): For heat map
-[NVD3](http://nvd3.org): Re-usable charts for D3
+[OpenCSV](http://opencsv.sourceforge.net/): For easy importing of CSV files  
+[UploadBean](http://www.javazoom.net/jzservlets/servlets.html): For easy uploading of zip files to the deployment server  
+[D3](http://dciarletta.github.io/d3-floorplan/): For heat map  
+[NVD3](http://nvd3.org): Re-usable charts for D3  
 
