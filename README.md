@@ -35,16 +35,16 @@ A user can calculate their own social activeness (based on social communication 
 
 
 ###Understanding the app usage data
-To implement app usage-based features of the school system, it is very necessary to understand the characteristics of the provided app usage data and several relevant assumptions.
-1. The app usage traces are real traces that have been anonymised. Thus they have all the characteristics of real-world data -- for better or worse!
-2. The app usage of every user is updated whenever the user interacted with applications (e.g., click the button, scroll the page, texting, etc) with a timestamp. Also, it captures other system events occurred in mobile OSes such as receiving notifications, etc.
-3. Every app usage update is associated with identifiable users and their demographic information. You can assume that there will always only be one MAC address for each user.
-4. The app usage time can be approximated and calculated by the time difference between the first interaction with a specific app and the first interaction with the subsequent app. When there is no subsequent update within 2 minutes (<=120 sec), assume that the user has continued using the app for 10 more seconds from the last interaction with the app. Let’s assume the app data for a specific user is as follows.
-t=1 (second), WhatsApp
-t=7, WhatsApp
-t=21, WhatsApp 
-t=30, Facebook 
-t=520, GoogleMap
-t=970, Calendar
-5. For the above example, usage duration of WhatsApp is 30-1 = 29, i.e., difference between first occurrence of WhatsApp and the first occurrence of the next app, i.e., the Facebook. (Note that it is not 21-1=20!!!) The usage duration of Facebook is 10 sec as there is no subsequent update for the following 2 minutes.
+To implement app usage-based features of the school system, it is very necessary to understand the characteristics of the provided app usage data and several relevant assumptions.   
+1. The app usage traces are real traces that have been anonymised. Thus they have all the characteristics of real-world data -- for better or worse!  
+2. The app usage of every user is updated whenever the user interacted with applications (e.g., click the button, scroll the page, texting, etc) with a timestamp. Also, it captures other system events occurred in mobile OSes such as receiving notifications, etc.  
+3. Every app usage update is associated with identifiable users and their demographic information. You can assume that there will always only be one MAC address for each user.  
+4. The app usage time can be approximated and calculated by the time difference between the first interaction with a specific app and the first interaction with the subsequent app. When there is no subsequent update within 2 minutes (<=120 sec), assume that the user has continued using the app for 10 more seconds from the last interaction with the app. Let’s assume the app data for a specific user is as follows.     
+t=1 (second), WhatsApp  
+t=7, WhatsApp  
+t=21, WhatsApp   
+t=30, Facebook   
+t=520, GoogleMap  
+t=970, Calendar  
+5. For the above example, usage duration of WhatsApp is 30-1 = 29, i.e., difference between first occurrence of WhatsApp and the first occurrence of the next app, i.e., the Facebook. (Note that it is not 21-1=20!!!) The usage duration of Facebook is 10 sec as there is no subsequent update for the following 2 minutes.   
 6. The smartphone access frequency is approximated and calculated based on the number of ‘phone use sessions’. A phone use session is a group of continuous interactions with apps where the two subsequent interactions are not more than 2 minutes apart (>120 sec). In the above example, there are three phone use sessions: The first session is (WhatsApp at t=1, WhatsApp at t=7, WhatsApp at t=21, Facebook at t=30), the second is (GoogleMap at t=520) and the third session is (Calendar at t=970). The smartphone access frequency is calculated as the number of phone use sessions per hour (averaged over the duration of interest).
