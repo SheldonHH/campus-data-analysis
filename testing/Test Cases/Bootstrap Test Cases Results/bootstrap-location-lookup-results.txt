@@ -1,0 +1,14 @@
+location-id,semantic-place <-- Test location_lookup for .zip
+-1,SMUSISL1LOBBY
+ <-- Test negative
+0,SMUSISL1LOBBY
+ <-- Test 0
+0.1,SMUSISL1LOBBY
+ <-- Test Decimal
+0.5,SMUSISL1LOBBY <-- Test Decimal
+<-- Test empty row -->
+
+,, <-- Test incorrect fields -->
+1010100007, <-- Test empty semantic-place
+,SMUSISL1WAITINGAREA <-- Test empty location-id
+1010100009,SMUSSIISSL1WAITINGAREA <-- test invalid semantic place

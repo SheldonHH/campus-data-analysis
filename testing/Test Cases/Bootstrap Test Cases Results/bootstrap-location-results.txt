@@ -1,0 +1,34 @@
+Test Cases Explained (Check with Wiki Requirements when in doubt):
+2014-13-22 12:36:20,cd902fce378155162da230ee04a4dfcbf9e966b5,1010200081 <-- Invalid month (13)
+2014-00-22 12:36:20,b1cb7dc7056711a3d9ebe1b17f704af7ab5633db,1010200081 <-- Invalid month (00)
+2014-03-32 12:36:20,daaa63b11b904cc66ea4f2efb1811aa7abf0192a,1010110007 <-- Invalid day (32)
+2014-03-22 25:36:20,d96e2b4d2cd9d918554cd0b337293c6680d48ba4,1010300041 <-- Invalid hour (25)
+2014-03-22 12:62:20,2e9396793445d632a53b41a4c5e71306f135bca8,1010300008 <-- Invalid minute (62)
+2014-03-22 12:36:62,8a7be25d481f5f70eeedf92e832e5550f0819e35,1010400003 <-- Invalid seconds (62)
+20005-03-22 12:36:20,5b615976674d55755855376d5c73a6f305ccaac1,1010300141 <-- Invalid year (20005)?
+2014-02-29 12:36:20,bd376a2b016eecfcb65f0f23b1b67bde57029aa6,1010200035	<-- Invalid date (29 Feb)
+2016-02-29 12:36:20,e8d7072a7651bd538083c5fb97b382b34d420d35,1010200108 <-- Valid leap year date! (2016 Feb 29)
+2014-3-22 12:36:20,f3a67ed32108793d12cf611ece6885d0cb0b039c,1010110001 <-- Invalid format (month is 3 instead of 03)
+2014-03-2 12:36:20,32f01d4a10863cb115b235aabe32e3d4654c1149,1010200015 <-- Invalid format (Day is 2 instead of 02)
+2014-03-22 2:36:20,541c743582aa6a3559ddfa03ba5eea00fc0f57e9,1010500009 <-- Invalid format (Hour is 2 instead of 02)
+2014~03~22 12:36:20,e9023cdb4f7aee62d75cbc7080b198ff292994a5,1010400006 <-- Invalid format (~ as date seperator)
+2014-03-22 12-36-20,8dfd41e9d67fdf8d77519520f8d774d819b56065,1010500018 <-- Invalid format (- as time seperator)
+<-- Test for Empty row --> Bottom part tests Mac_Addresses
+2014-03-22 12:36:20,g9574c2cf43f409aa3fb689dccea9aab7679029b,1010200051 <-- Non-hexadecimal (g)
+2014-03-22 12:36:20,dGa98b8a1026e09ef2e1a87df82f6d5ca8b29e8a,1010110001 <-- Non-hexadecimal (G)
+2014-03-22 12:36:20,7f-fccab30b90ecca61920631e4b9010bdc0bdc8,1010200043 <-- Non-hexadecimal (-)
+2014-03-22 12:36:20,2ff.c2b2045b3ab4abaaf916e3336e52c6d80530,1010200116 <-- Non-hexadecimal (.)
+2014-03-22 12:36:20,83bc@249f3f8fdbe4683b29b347c80b02cf9d002,1010400001 <-- Non-hexadecimal (@)
+2014-03-22 12:36:20,d8af26a29ac39f0ceca6e697fcbbe718ae05aad,1010200101 <-- Invalid length (39 characters)
+2014-03-22 12:36:20,554b01079427192c6906a0b86f34aa94121eef896,1010300008 <-- Invalid length (41 characters)
+,, <-- Tests for empty fields --> Bottom part tests location ID
+2014-03-22 12:36:20,2d2ca29896f6da86be3ffd89938a1ff78dd0ab37,abc <-- Invalid location id (Must be numbers)
+2014-03-22 12:36:20,3710da90857ff5c01da3253eae094d30e579ed83,-1 <-- Invalid location id(negative)
+2014-03-22 12:36:20,a370c28abbd5aefeb6bea0f8a359cfdd354c53fd,0 <-- Invalid location id (0)
+2014-03-22 12:36:20,93e020388e31069a7655f801ff1b5e15cd83cda6,99999999999999 <-- Invalid location id (does not exist in location-lookup)
+2014-03-01 00:00:57,3710da90857ff5c01da3253eae094d30e579ed83,0.1 <-- Invalid location id (does not exist in location-lookup and is a decimal?)
+2014-03-01 00:00:57,90a9f3c38bfe657dc5eebf2e12cf0a08418106ad,1010400006
+2014-03-01 00:00:57,90a9f3c38bfe657dc5eebf2e12cf0a08418106ad,1010400006 <-- Duplicate row
+,5b605e0335d2b8248544e17b5306c4b14cc28f12,1010500001 <-- Test empty timestamp
+2014-03-01 00:00:57,,1010110001 <-- Check empty mac_address
+2014-03-01 00:00:57,fa47280bb31f198606665db64372bb4cd6b3fc4c, <-- Check empty location-id
