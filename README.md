@@ -66,12 +66,17 @@ The request queries parameter may vary across different services. For this proje
 1. if the mandatory field is missing  
 2. if the field is blank.  
 3. if the token is invalid.  
-Valid Request:
-`http://<host>/json/heatmap?token=[tokenValue]&floor=2&date=2014-03-29T12:30:00`
-
-
-
-
+Valid Request:      
+`http://<host>/json/heatmap?token=[tokenValue]&floor=2&date=2014-03-29T12:30:00`  
+Invalid request:   
+`http://<host>/json/heatmap?token=[tokenValue]&floor=2&date= `
+The response return should be: (Note: The messages field should have all the missing/blank fields or invalid token errors)   
+```
+{
+"status": "error"
+"messages": [ "blank date","invalid token", "missing floor" ]
+}
+```
 
 ####Using Libraries and External Code
 1. You are welcome to use open source code libraries where it makes sense. But you must make it clear what you have used and why. When in doubt, check with your project supervisor.
