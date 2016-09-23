@@ -45,21 +45,21 @@ The request queries parameter may vary across different services. For this proje
 
 ###JSON Values
 #####A JSON values can be a/an
-#####number (integer or floating point). To indicate a floating number, always put a decimal place. For example, 12.0 instead of 12.
-#####string (in double quotes)
-#####Boolean (true or false)
-#####array (in square brackets). array values are ordered. object (in curly brackets)
-#####null
+**number** (integer or floating point). To indicate a floating number, always put a decimal place. For example, 12.0 instead of 12.
+**string** (in double quotes)
+**Boolean** (true or false)
+**array** (in square brackets). array values are ordered. object (in curly brackets)
+**null**
 
 
 ###Ordering
-#####An array is an ordered collection of values.
-#####An object is an unordered set of name/value pairs.
+An array is an ordered collection of values.
+n object is an unordered set of name/value pairs.
 
 
 ###Whitespace
-#####JSON generally ignores any whitespace around or between syntactic elements (values and punctuation, but not within a string value).
-#####JSON format for each functionality is specified in detail below.
+JSON generally ignores any whitespace around or between syntactic elements (values and punctuation, but not within a string value).
+JSON format for each functionality is specified in detail below.
 
 ###Common Validations for JSON requests
 #####For all the input fields, you need to check
