@@ -86,3 +86,11 @@ The response return should be: (Note: The messages field should have all the mis
 [D3](http://dciarletta.github.io/d3-floorplan/): For heat map  
 [NVD3](http://nvd3.org): Re-usable charts for D3  
 
+###Bootstrap
+Bootstrapping is done by sending a multi-part request (http://www.faqs.org/rfcs/rfc1867.html) to the server. You can assume that the user is using a form to send the multi-part request:
+
+
+
+
+
+
