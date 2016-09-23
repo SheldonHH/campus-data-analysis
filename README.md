@@ -26,9 +26,9 @@ The administrator should also be able to add new location data while the applica
 While loading location data for bootstrapping, the app may be required to delete a subset of data which could cause undesirable bias to the analysis.
 Also, the administrator is able to delete a subset of data (for a certain user over a certain period), using a web UI while the application is running.
 All the subsequent queries after the deletion need to be performed without deleted data.
-9. Smartphone Usage Heatmap (Green)
+9. **Smartphone Usage Heatmap ** (Green)
 A user can see the density of people using smartphones for a specified floor in the SIS building, given a particular date and time. (Output does not need to be in graphical form.)
-10. Social Activeness Report (Green)
+10.  **Social Activeness Report ** (Green)
 A user can calculate their own social activeness (based on social communication app usage and physical grouping).
 
 
